@@ -1,10 +1,16 @@
-
+# Summary
 
 > Some notes inspired by the book ["Discrete Mathematics: An Open Introduction, Oscar Levin"](https://discrete.openmathbooks.org/dmoi3/ch_intro.html).
 
-# Discrete Mathematics
+- [Introduction](#introduction)
+- [Mathematical Statements](#mathematical-statements)
+- [Sets](#sets)
+
+# Introduction
 
 Individually separate and distinct.
+
+
 
 ## Discrete vs. Continuous Values (with Function Examples)
 
@@ -207,3 +213,165 @@ Solutions provided for the following exercices in the book:
 - 0.2.9, 0.2.10  
 - 0.2.12  
 - 0.2.14, 0.2.15, 0.2.16, 0.2.17  
+
+[⬆️ Return to top](#summary)
+
+# Sets
+
+A **set** is an unordered collection of distinct mathematical objects. Each object in a set is called an **element** or **member**. 
+
+- **Uniqueness**: Repeated elements do not affect the set.
+- **Order irrelevance**: The order of elements in a set does not matter.
+
+## Set Notation
+
+We represent sets using curly braces `{}` to enclose their elements.
+
+- Example: `A = {1, 2, 3}`
+
+The symbol `∈` denotes membership and is read as "is an element of" or "belongs to".
+
+- Example:
+  - `a ∈ {a, b, c}` means `a` is an element of the set `{a, b, c}`.
+  - `d ∉ {a, b, c}` means `d` is not an element of `{a, b, c}`.
+
+An **empty set** is a set with no elements and is denoted by:
+
+- `∅ = {}`
+
+### Describing Sets
+
+When sets contain many elements (possibly infinitely many), listing elements explicitly becomes impractical. 
+For example, the set of all even natural numbers can be represented as:
+
+- `E = {0, 2, 4, 6, ...}`
+
+A more precise way is using **set-builder notation**, which specifies the conditions elements must satisfy:
+
+- Example: `E = {x ∈ ℕ : ∃n ∈ ℕ (x = 2n)}`
+
+Here, the colon `:` (or sometimes a vertical bar `|`) means "such that".
+
+In simpler terms, we can write:
+
+- `E = {x ∈ ℕ : x is even}`
+
+## Relationships Between Sets
+
+### Equality
+
+Two sets are **equal** if and only if they contain exactly the same elements.
+
+- Example:
+  - `{1, 2, 3} = {3, 1, 2}` (order doesn't matter)
+  - `{1, 2, 3} = {1, 1 + 1, 1 + 1 + 1}` (representation doesn't matter)
+
+If `A = {1, 2, 3}` and `B = {1, 2, 3, 4}`, then:
+
+- `A ≠ B` because `B` contains the element `4` which is not in `A`.
+
+### Subsets
+
+A set `A` is a **subset** of another set `B` if every element of `A` is also an element of `B`. 
+We write:
+`A ⊆ B`
+
+Symbol **⊆** means that equality is allowed.
+
+Symbol **⊂** means every element in `A` is also in `B`, but `A ≠ B`. 
+Equality is not allowed, this a **proper subset**.
+
+Symbol **⊈** means **not a subset**.
+
+Examples:
+
+- `{1, 3, 2} ⊆ {1, 2, 3}` (**subset**)
+- `{1, 2} ⊂ {1, 2, 3, 4}` (**proper subset**)
+- `{3, 7} ⊈ {1, 2, 3, 4}` (**not a subset** since `7` is missing)
+
+### Power Sets
+
+The **power set** of a set `A`, denoted `P(A)`, is the set of all subsets of `A`.
+
+- Example: If `A = {1, 2, 3}`, then:
+
+```
+P(A) = {∅, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}
+```
+
+### Cardinality
+
+The **cardinality** of a set `A`, denoted `|A|`, is the number of elements in the set.
+
+Examples:
+
+- If `A = {1, 2, 3}`, then `|A| = 3`
+- If `B = {1, 2, 3, 4}`, then `|B| = 4`
+
+Thus, `|A| ≠ |B|`.
+
+## Operations on Sets
+
+### Union
+
+The **union** of sets `A` and `B`, denoted `A ∪ B`, is the set of all elements that are in either `A`, `B`, or both.
+
+Example:
+
+- If `A = {1, 2, 3}` and `B = {2, 3, 4}`, then `A ∪ B = {1, 2, 3, 4}`
+
+### Intersection
+
+The **intersection** of sets `A` and `B`, denoted `A ∩ B`, is the set of all elements common to both `A` and `B`.
+
+Example:
+
+- If `A = {1, 2, 3}` and `B = {2, 3, 4}`, then `A ∩ B = {2, 3}`
+
+### Set Difference
+
+The **difference** of sets `A` and `B` (`A \ B`) is the set of elements that are in `A` but not in `B`.
+
+Example:
+
+If `A = {1, 2, 3}` and `B = {2, 4}`, then `A \ B = {1, 3}`
+
+### Complement
+
+Given a universal set `U`, the **complement** of set `A`, denoted `A̅`, contains all elements of `U` not in `A`.
+
+Example:
+
+- If `U = {1, 2, ..., 10}` and `A = {2, 3, 5, 7}`, then `A̅ = {1, 4, 6, 8, 9, 10}`
+
+### Cartesian Product
+
+The **Cartesian product** of sets `A` and `B`, denoted `A × B`, is the set of all ordered pairs `(a, b)` where `a ∈ A` and `b ∈ B`.
+
+Example:
+
+- If `A = {1, 2}` and `B = {3, 4}`, then:
+
+```
+A × B = {(1, 3), (1, 4), (2, 3), (2, 4)}
+```
+
+## Logical Equivalences
+
+Set operations can be related to logical connectives:
+
+- `x ∈ A ∪ B ⇔ (x ∈ A) ∨ (x ∈ B)`
+- `x ∈ A ∩ B ⇔ (x ∈ A) ∧ (x ∈ B)`
+- `x ∈ A̅ ⇔ ¬(x ∈ A)`
+
+## Exercises
+
+Solutions provided for the following exercises in the book:
+
+- 0.3.1, 0.3.2, 0.3.3, 0.3.4, 0.3.5, 0.3.6, 0.3.7, 0.3.8, 0.3.9
+- 0.3.11, 0.3.12, 0.3.13
+- 0.3.15, 0.3.17
+- 0.3.20, 0.3.28
+
+[⬆️ Return to top](#summary)
+
