@@ -10,8 +10,6 @@
 
 Individually separate and distinct.
 
-
-
 ## Discrete vs. Continuous Values (with Function Examples)
 
 ### Discrete Function
@@ -51,6 +49,8 @@ f(x) = 2.5x + 3
 | 2.7       | 9.75          |
 
 The function varies gradually from point to point. You can always find intermediate values (such as 1.01, 1.02, etc.). There is no gap between values.
+
+[⬆️ Return to top](#summary)
 
 # Mathematical Statements
 
