@@ -5,6 +5,7 @@
 - [Introduction](#introduction)
 - [Mathematical Statements](#mathematical-statements)
 - [Sets](#sets)
+- [Functions](#functions)
 
 # Introduction
 
@@ -370,8 +371,223 @@ Solutions provided for the following exercises in the book:
 
 - 0.3.1, 0.3.2, 0.3.3, 0.3.4, 0.3.5, 0.3.6, 0.3.7, 0.3.8, 0.3.9
 - 0.3.11, 0.3.12, 0.3.13
-- 0.3.15, 0.3.17
-- 0.3.20, 0.3.28
+- 0.3.15
+- 0.3.17
+- 0.3.20
+- 0.3.28
 
 [⬆️ Return to top](#summary)
+
+# Functions
+
+A **function** is a rule that assigns each input **exactly one** output.  
+The set of all inputs is the **domain**, and the set of allowed outputs is the **codomain**.
+
+```math
+f : X \to Y
+```
+
+Here,  
+
+- **f** is the name of the function,  
+- **X** is the **domain**,  
+- **Y** is the **codomain**,  
+- A specific **rule** tells us how each input in X maps to an output in **Y**.
+
+
+
+## Basic Examples
+
+**Example**  
+```math
+f : \mathbb{N} \to \mathbb{N} \quad\text{defined by}\quad f(x) = x + 1
+```
+  - **Domain** and **Codomain**: the set of natural numbers $(\mathbb{N})$.  
+  - **Rule**: “Add 1 to the input.”
+
+Not every element of the codomain must be used. For instance:
+
+```math
+f : \{1, 2, 3\} \to \{0, 1, 2, 3\}, \quad f(x) = x - 1
+```
+
+- $(f(1) = 0,\ f(2) = 1,\ f(3) = 2)$
+- The **range** (actual outputs) here is {0,1,2}, which is a subset of the codomain {0,1,2,3\}
+
+
+
+## Validity Conditions
+
+1. **Every input has some output** (no input is left undefined).  
+2. **Each input has exactly one output** (no input is mapped to multiple outputs).
+
+### Invalid Examples
+
+- **Missing Output**  
+```math
+f : \{1\} \to \{1,2,3\}, \quad f(x) = x - 1
+```
+  Since $(f(1)=0) and (0 \notin \{1,2,3\})$, this “function” is invalid. The output must lie in the codomain.
+
+- **Multiple Outputs**  
+  Suppose Jack has two dogs, a labrador and a doberman:
+```math
+f : \{\text{Jack}, \text{Paul}\} \to \{\text{Labrador}, \text{Rottweiler}, \text{Doberman}\}
+```
+  If we try:
+
+  - f(Jack) = Labrador
+  - f(Jack) = Doberman
+  - f(Paul) = Rottweiler
+
+  Jack is assigned **two** different outputs (Labrador and Doberman). This violates the rule that each input can map to **only one** output.
+
+
+
+## Describing a Function
+
+According to the **Rule of Four**, a function can be described:
+
+1. **Algebraically** (a formula)  
+2. **Numerically** (a table)  
+3. **Graphically** (a coordinate plot, for example)  
+4. **In words** (a verbal description)
+
+When the domain is **finite**, an algebraic formula might be too complicated or impossible to find. Therefore, we often use **two-line notation** or **mapping diagrams**.
+
+Two-line notations is better to prevent mistakes like missing outputs or duplicating outputs.
+
+### Two-Line Notation
+
+**Correct Definition Example**:
+```math
+f : \{1, 2, 3\} \to \{a, b, c, d\}
+```
+
+```math
+f = 
+\begin{pmatrix}
+1 & 2 & 3 \\
+d & a & c
+\end{pmatrix}
+```
+
+This means:  
+
+- f(1) = d
+- f(2) = a
+- f(3) = c  
+  No input is left without an output, and no input has more than one output.
+
+**Invalid Definition Example**:
+```math
+g : \{1, 2, 3\} \to \{a, b, c, d\}
+```
+
+```math
+g =
+\begin{pmatrix}
+1 & 2 & 3 \\
+\; & a, c? & d
+\end{pmatrix}
+```
+
+- “1” has **no** assigned output.  
+
+- “2” has **two** outputs ((a\) and (c\)).  
+  Hence, (g\) is not a valid function.
+
+  > Note that errors are really easy to spot
+
+#### Tables
+
+We can also define functions in a table, but we must ensure every input has exactly one output:
+
+| Input (x) | Output g(x)   |
+| --------- | ------------- |
+| 1         | *(undefined)* |
+| 2         | a, c?         |
+| 3         | d             |
+
+This is an invalid function for the same reasons stated above.
+
+---
+
+### Recursively Defined Functions
+
+For $f : \mathbb{N} \to \mathbb{N}$, a **recursive definition** has:
+
+- An **initial condition**, specifying (f\) at some starting point.
+- A **recurrence relation**, indicating how to get f(n+1) from f(n)\.
+
+A **recurrence relation** is a mathematical expression that defines a sequence by relating each term to one or more previous terms.
+
+#### Example of a Recursive Definition
+
+- **Initial condition**: $f(0) = 1$  
+- **Recurrence relation**: $f(n + 1) = f(n) + 1$
+
+**Find** $f(3)$:
+
+| Step | Calculation       | Result |
+| ---: | :---------------- | -----: |
+|    1 | $f(0)$            |      1 |
+|    2 | $f(1) = f(0) + 1$ |      2 |
+|    3 | $f(2) = f(1) + 1$ |      3 |
+|    4 | $f(3) = f(2) + 1$ |      4 |
+
+**Answer**: $f(3) = 4$.
+
+
+
+## Surjections, Injections, and Bijections
+
+**Injective (One-to-One)**  
+
+- **Definition**: A function is injective if **different** inputs never map to the **same** output. Equivalently, every element of the codomain is mapped by **at most one** domain element.  
+- **Example**: $\{1,2,3\}\to\{2,4,6\}$ with $1\mapsto2,\ 2\mapsto4,\ 3\mapsto6$ is injective.
+
+**Surjective (Onto)**  
+
+- **Definition**: A function is surjective if **every** element of the codomain is the image of **at least one** domain element.  
+- **Example**: $\{1,2,3,4\}\to\{0,1\}$ where $1\mapsto1,\ 2\mapsto0,\ 3\mapsto1,\ 4\mapsto0$. Both $0$ and $1$ appear as outputs.
+
+**Bijective**  
+
+- **Definition**: A bijective function is both **injective** and **surjective**. Each codomain element is the image of **exactly one** domain element.  
+- **Example**: $\{1,2,3\}\to\{2,3,4\}$ with $1\mapsto2,\ 2\mapsto3,\ 3\mapsto4$ is bijective.
+
+
+
+## Image and Inverse Image
+
+**Image of an Element**  
+For $x$ in the domain, the **image** is $f(x)$ in the codomain.
+
+**Inverse Image of an Element**  
+For $y$ in the codomain, the **inverse image** $f^{-1}(y)$ is the set of all $x$ in the domain for which $f(x)=y$.
+
+**Image of a Subset**  
+For a subset $A$ of the domain, $f(A) = \{\,f(x)\mid x\in A\}$.
+
+**Inverse Image of a Subset**  
+For a subset $B$ of the codomain, $f^{-1}(B) = \{\,x\mid f(x)\in B\}$.
+
+## Exercises (0.4.x)
+
+Solutions provided for the following exercises in the book:
+
+- 0.4.1, 0.4.2
+- 0.4.5
+- 0.4.7
+- 0.4.9, 0.4.10
+- 0.4.12, 0.4.13
+- 0.4.17
+- 0.4.21, 0.4.22
+- 0.4.24, 0.4.25, 0.4.26, 0.4.27
+
+
+[⬆️ Return to top](#summary)
+
+
 
