@@ -497,7 +497,7 @@ g =
 - “2” has **two** outputs ((a\) and (c\)).  
   Hence, (g\) is not a valid function.
 
-  > Note that errors are really easy to spot
+  > Note that errors are really easy to spot using a matrice
 
 #### Tables
 
