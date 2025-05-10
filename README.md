@@ -568,10 +568,10 @@ For $x$ in the domain, the **image** is $f(x)$ in the codomain.
 For $y$ in the codomain, the **inverse image** $f^{-1}(y)$ is the set of all $x$ in the domain for which $f(x)=y$.
 
 **Image of a Subset**  
-For a subset $A$ of the domain, $f(A) = \{\,f(x)\mid x\in A\}$.
+For a subset $A$ of the domain, $f(A) = \{f(x)\mid x\in A\}$.
 
 **Inverse Image of a Subset**  
-For a subset $B$ of the codomain, $f^{-1}(B) = \{\,x\mid f(x)\in B\}$.
+For a subset $B$ of the codomain, $f^{-1}(B) = \{x\mid f(x)\in B\}$.
 
 ## Exercises (0.4.x)
 
