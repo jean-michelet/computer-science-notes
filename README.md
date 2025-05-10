@@ -261,6 +261,145 @@ Solutions provided for the following exercices in the book:
 
 [⬆️ Return to top](#summary)
 
+## Rules of Logic
+
+Logic explains how statements combine, letting us analyze mathematical arguments with precision.
+
+### Truth Tables
+
+A **truth table** lists every possible assignment of truth values to atomic statements and shows the result of a molecular statement.
+
+**Example:**
+
+Let
+
+- `P`: *You do your homework.*
+- `Q`: *You get a good grade.*
+
+Consider the molecular statement:  
+`¬P ∨ Q`  
+(read as "Either you don’t do your homework, or you get a good grade.")
+
+| P    | Q    | ¬P   | **¬P ∨ Q** |
+| ---- | ---- | ---- | ---------- |
+| T    | T    | F    | **T**      |
+| T    | F    | F    | **F**      |
+| F    | T    | T    | **T**      |
+| F    | F    | T    | **T**      |
+
+---
+
+### Logical Equivalence
+
+Two molecular statements `A` and `B` are **logically equivalent** (written `A ≡ B`) if they have the same truth value for all possible combinations of truth values of their components.
+
+**Key Result:**
+
+`P → Q ≡ ¬P ∨ Q`
+
+| P    | Q    | **P → Q** | **¬P ∨ Q** |
+| ---- | ---- | --------- | ---------- |
+| T    | T    | **T**     | **T**      |
+| T    | F    | **F**     | **F**      |
+| F    | T    | **T**     | **T**      |
+| F    | F    | **T**     | **T**      |
+
+This means **implications are disjunctions**.
+
+---
+
+#### Implication and Contrapositive
+
+**Theorem:**  
+`P → Q ≡ ¬Q → ¬P`
+
+*If it is a cat, then it is an animal.* 
+**Contrapositive:** *If it is not an animal, then it is not a cat.*
+
+| P (Cat) | Q (Animal) | **P → Q** | ¬Q   | ¬P   | **¬Q → ¬P** |
+| ------- | ---------- | --------- | ---- | ---- | ----------- |
+| T       | T          | **T**     | F    | F    | **T**       |
+| T       | F          | **F**     | T    | F    | **F**       |
+| F       | T          | **T**     | F    | T    | **T**       |
+| F       | F          | **T**     | T    | T    | **T**       |
+
+An implication is logically equivalent to its contrapositive.
+
+---
+
+#### De Morgan’s Laws
+
+These laws describe how negation interacts with conjunction (`and`) and disjunction (`or`):
+
+- `¬(P ∧ Q) ≡ ¬P ∨ ¬Q`
+- `¬(P ∨ Q) ≡ ¬P ∧ ¬Q`
+
+**Example:**
+
+Let
+
+- `P`: You study
+- `Q`: You sleep early
+
+- `¬(P ∧ Q)`: "It is not true that you study and sleep early."  
+  Equivalent to `¬P ∨ ¬Q`: "You don’t study or you don’t sleep early."
+
+- `¬(P ∨ Q)`: "It is not true that you study or sleep early."  
+  Equivalent to `¬P ∧ ¬Q`: "You don’t study and you don’t sleep early."
+
+**Truth Table for `¬(P ∧ Q) ≡ ¬P ∨ ¬Q`:**
+
+| P    | Q    | P ∧ Q | ¬(P ∧ Q) | ¬P   | ¬Q   | **¬P ∨ ¬Q** |
+| ---- | ---- | ----- | -------- | ---- | ---- | ----------- |
+| T    | T    | T     | F        | F    | F    | F           |
+| T    | F    | F     | T        | F    | T    | T           |
+| F    | T    | F     | T        | T    | F    | T           |
+| F    | F    | F     | T        | T    | T    | T           |
+
+**Truth Table for `¬(P ∨ Q) ≡ ¬P ∧ ¬Q`:**
+
+| P    | Q    | P ∨ Q | ¬(P ∨ Q) | ¬P   | ¬Q   | **¬P ∧ ¬Q** |
+| ---- | ---- | ----- | -------- | ---- | ---- | ----------- |
+| T    | T    | T     | F        | F    | F    | F           |
+| T    | F    | T     | F        | F    | T    | F           |
+| F    | T    | T     | F        | T    | F    | F           |
+| F    | F    | F     | T        | T    | T    | T           |
+
+---
+
+#### Negation of an Implication
+
+**Theorem:**  
+`¬(P → Q) ≡ P ∧ ¬Q`
+
+Let `P`: You study  
+Let `Q`: You pass the exam
+
+Then  
+`¬(P → Q)` means: "It’s not true that if you study, then you pass."  
+This is equivalent to: "You study and you don’t pass."
+
+| P (Study) | Q (Pass) | P → Q | **¬(P → Q)** | **P ∧ ¬Q** |
+| --------- | -------- | ----- | ------------ | ---------- |
+| T         | T        | T     | **F**        | **F**      |
+| T         | F        | F     | **T**        | **T**      |
+| F         | T        | T     | **F**        | **F**      |
+| F         | F        | T     | **F**        | **F**      |
+
+#### Boolean Algebra Perspective
+
+Since logical statements can be rewritten using these identities (e.g. implication as disjunction, De Morgan’s laws, etc.), they follow a system known as **Boolean algebra**.
+
+###   Equivalence for Quantified Statements
+
+studying...
+
+###   Deduction
+
+studying...
+
+[⬆️ Return to top](#summary)
+
 # Sets
 
 A **set** is an unordered collection of distinct mathematical objects. Each object in a set is called an **element** or **member**. 
