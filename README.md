@@ -3,7 +3,7 @@
 > Some notes inspired by the book ["Discrete Mathematics: An Open Introduction, Oscar Levin"](https://discrete.openmathbooks.org/dmoi3/ch_intro.html).
 
 - [Introduction](#introduction)
-- [Mathematical Statements](#mathematical-statements)
+- [Logic](#logic)
 - [Sets](#sets)
 - [Functions](#functions)
 
@@ -53,11 +53,55 @@ The function varies gradually from point to point. You can always find intermedi
 
 [⬆️ Return to top](#summary)
 
-# Mathematical Statements
+# Logic 
+
+Logic is the study of the conclusions that can be drawn from given mathematical statements or facts.
+A **statement** becomes a **fact** once it's proven to be true.
+
+## Basic Example
+
+If I say a number is greater than 5 and less than 10, we can conclude:
+
+-  It is between 5 and 10.
+- But we can't conclude it's exactly 7.
+
+This shows that conclusions in math must be supported by valid reasoning.
+
+#### **Structure of a Mathematical Argument**
+
+A mathematical argument has:
+
+- **Premises** – the starting assumptions or conditions.
+- **Conclusion** – what follows logically from the premises.
+
+**Example:**
+
+- Premises: "All even numbers are divisible by 2" and "8 is even".
+- Conclusion: "8 is divisible by 2".
+
+The conclusion is a logical consequence of the premises.
+
+#### Not all arguments are valid.
+
+**Example:**
+
+- Premise: "If it rains, the ground gets wet."
+- Conclusion: "It rained because the ground is wet."
+
+This is a **logical fallacy** (affirming the consequent). The wet ground might have another cause, like a sprinkler.
+
+Logic helps us:
+
+- Determine when a conclusion **does** follow from given premises.
+- Recognize when it **doesn't**.
+
+In mathematics, every result we claim must come from a valid argument even when the logic is simple or seems obvious.
+
+## Mathematical Statements
 
 In order to do mathematics, we must clearly and precisely communicate mathematical ideas. Unlike many other subjects, mathematics requires exact definitions and statements.
 
-## 1. Atomic and Molecular Statements
+### 1. Atomic and Molecular Statements
 
 **Definitions:**
 
@@ -73,7 +117,7 @@ In order to do mathematics, we must clearly and precisely communicate mathematic
 
 ---
 
-## 2. Logical Connectives
+### 2. Logical Connectives
 
 We use logical connectives to form complex statements from simpler ones.
 
@@ -95,7 +139,7 @@ We use logical connectives to form complex statements from simpler ones.
   - Read as `"P if and only if Q"`.  
   - True if `P` and `Q` have the same truth value (both true or both false).
 
-### Unary Connective:
+#### Unary Connective:
 
 - **Negation (`¬P`):**  
   - Read as `"not P"`.  
@@ -111,7 +155,7 @@ We use logical connectives to form complex statements from simpler ones.
 
 ---
 
-## 3. Implications
+### 3. Implications
 
 An implication (conditional) is expressed as `P → Q`, where:
 
@@ -129,7 +173,7 @@ To prove `P → Q`, assume `P` is true and show that this assumption leads logic
 
 ---
 
-## 4. Converse and Contrapositive
+### 4. Converse and Contrapositive
 
 - **Converse:** The converse of `P → Q` is `Q → P`.  
   **Important:** The converse is **not** logically equivalent to the original implication.
@@ -144,7 +188,7 @@ To prove `P → Q`, assume `P` is true and show that this assumption leads logic
 
 ---
 
-## 5. "If and Only If" Statements (Biconditionals)
+### 5. "If and Only If" Statements (Biconditionals)
 
 A statement of the form `P ↔ Q` means both implications `P → Q` and `Q → P` hold simultaneously. Thus, it splits into two parts:
 
@@ -161,7 +205,7 @@ means precisely:
 
 ---
 
-## 6. Necessary and Sufficient Conditions
+### 6. Necessary and Sufficient Conditions
 
 - **Necessary Condition:**  
   `"P is necessary for Q"` means `Q → P`.
@@ -181,7 +225,7 @@ If you live in Paris, then you live in France.
 
 ---
 
-## 7. Quantifiers
+### 7. Quantifiers
 
 Quantifiers enable the use of variables in mathematical statements. The two primary quantifiers are:
 
@@ -204,7 +248,7 @@ Negations of quantified statements follow these equivalences:
 
 ---
 
-## 8. Exercises
+### 8. Exercises
 
 Solutions provided for the following exercices in the book:
 
