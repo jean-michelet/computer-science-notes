@@ -402,7 +402,91 @@ studying...
 
 ###   Deduction
 
-studying...
+In logic, deduction rules are valid forms of argument that guarantee the truth of the conclusion, provided the premises are true.
+
+#### Structure of a Deduction Formula
+
+A deduction rule is written in a vertical structure, like a small argument. 
+It contains:
+- One or more premises (assumed to be true),
+- A horizontal line (couldn't display on GitHub Markdown),
+- And a conclusion, marked by the symbol `∴` (read as "therefore").
+
+#### Study case 1: **Modus Ponens**
+
+Let:
+
+* `P`: Your phone is connected to Wi-Fi
+* `Q`: Your phone receives notifications
+
+We are using the deduction rule:
+
+```math
+\begin{array}{c}
+P \rightarrow Q \\
+P \\
+\therefore\ Q
+\end{array}
+```
+
+**Explanation**:
+
+- If your phone is connected to Wi-Fi, then it receives notifications. (`P → Q`)
+- Your phone **is** connected to Wi-Fi. (`P`)
+- **Therefore**, your phone receives notifications. (`Q`)
+
+Reminder: In logic, the implication `P → Q` can still be **true even when `P` is false**. 
+For example, if the phone is *not* connected to Wi-Fi (`P` is false), the implication doesn't tell us whether it receives notifications (`Q`) or not — it still counts as logically "true" either way (Vacuous truth).
+
+But here, we **know** that:
+
+* The implication `P → Q` is true, and
+* `P` is true (your phone is connected),
+
+So in order for the implication to hold, `Q` **must** be true as well.
+
+#### Study case 2
+
+```math
+\begin{aligned}
+P \rightarrow Q \\
+\neg P \rightarrow Q \\
+\therefore\ Q
+\end{aligned}
+```
+
+**Example**
+Let:
+
+* `P`: You flipped the switch
+* `Q`: The lights are on
+
+- If you flipped the switch, the lights are on.
+- If you didn’t flip the switch, the lights are still on (maybe motion sensor).
+- **Therefore**, the lights are on.
+
+#### Study case 3:
+
+```math
+\begin{aligned}
+P \rightarrow R \\
+Q \rightarrow R \\
+P \vee Q \\
+\therefore\ R
+\end{aligned}
+```
+
+**Example**
+Let:
+
+* `P`: The bakery is open
+* `Q`: The café is open
+* `R`: You can buy fresh bread
+
+- If the bakery is open, you can buy fresh bread.
+- If the café is open, you can buy fresh bread.
+- Either the bakery or the café is open.
+- **Therefore**, you can buy fresh bread.
 
 [⬆️ Return to top](#summary)
 
