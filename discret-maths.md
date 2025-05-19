@@ -111,9 +111,8 @@ In order to do mathematics, we must clearly and precisely communicate mathematic
 
 **Non-Statements:**
 
-- Some expressions resemble statements but aren't, because they contain free variables. For example, the expression  
-  `3 + x = 12`  
-  is not inherently true or false—it depends on the value assigned to `x`.
+- Some expressions resemble statements but aren't, because they contain free variables. For example, the expression  `3 + x = 12`
+is not inherently true or false—it depends on the value assigned to `x`.
 
 ---
 
@@ -292,6 +291,13 @@ Consider the molecular statement:
 ### Logical Equivalence
 
 Two molecular statements `A` and `B` are **logically equivalent** (written `A ≡ B`) if they have the same truth value for all possible combinations of truth values of their components.
+
+**Implication form:**
+If it is raining, then I will take an umbrella.
+(This is of the form `P → Q`).
+**Logically equivalent disjunction form:**
+Either it is not raining, or I will take an umbrella.
+(This is of the form `¬P ∨ Q`).
 
 **Key Result:**
 
