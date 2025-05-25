@@ -9,7 +9,7 @@
 
 # Introduction
 
-Individually separate and distinct.
+Discret: Individually separate and distinct.
 
 ## Discrete vs. Continuous Values (with Function Examples)
 
